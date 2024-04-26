@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>paint</title>
+    <link rel="stylesheet" href="/css/paint.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="center">
+    <div class="container">
+      <!--/// Menu Bar ///-->
+      <div class="Menu-bar">
+        <div class="menu-item">
+            <a href="" class="menu-button">
+                <img src="/image/paint.png" alt="">
+            </a>
+            <a href="Home.html" class="menu-button">
+                <img src="/image/home.svg" alt="">
+            </a>
+            <a href="" class="menu-button">
+                <img src="/image/search.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!--/// tools Board ///-->
+
+      <section class="tools-board">
+        <div class="head">
+          <div class="row buttons">
+            <button class="clear-canvas">clear canvas</button>
+            <button class="save-img">Save Image</button>
+          </div>
+      </div> 
+
+        <div class="row">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <img src="icons/brush.svg" alt="">
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <img src="icons/eraser.svg" alt="">
+              <span>Eraser</span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5">
+            </li>
+          </ul>
+        </div>
+        <div class="row colors">
+          <label class="title">Colors</label>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4A98F7">
+            </li>
+          </ul>
+        </div>
+        
+      </section>
+
+    <!--/// Drawing Board ///-->
+
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+    </div>
+    </div>
+
+    <script src="/js/paint.js" defer></script>
+  </body>
+</html>

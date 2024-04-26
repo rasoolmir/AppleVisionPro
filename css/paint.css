@@ -1,0 +1,286 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+    /* color */
+    --Background_first:rgba(200, 200, 200, 0.3);
+    --Background_second: #fff;
+    --Background_Third: rgba(255, 255, 255, 0.3);
+    --Background_fourth: rgba(20, 20, 20, 0.5);
+    --Background_border:  rgba(209, 213, 219, 0.3);
+    --color-text_first: white;
+    --color-text_second:#5A6168;
+    --color-subtitle: #4c5262;
+    --Background_buttons: #36e2ec;
+    --Secondary: #3498db;
+    --buttons: #F9F9F9;
+}
+
+body{
+  font-family: 'OpenSans', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: url(/image/background.jpg);
+    justify-content: center;
+    background-size: cover;
+
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 100%;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  max-width: 65.6rem;
+}
+
+/*------------- 
+Menu Bar 
+-------------*/
+
+.Menu-bar {
+  margin-top: 9.2rem;
+}
+
+.menu-item {
+  width: fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+  background: var(--Background_first);
+  text-align: center;
+  backdrop-filter: blur(1.1rem) saturate(180%);
+  border-radius: 2.3rem;
+  border: 0.1rem solid var(--Background_border);
+  display: inline-block;
+  padding: 0;
+}
+
+.menu-button {
+  display: grid;
+  margin: 0.6rem 0.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  /*border: 0.1rem solid #fff;*/
+  width: 1.8rem;
+  height: 1.8rem;
+  align-items: center;
+}
+
+.menu-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill-rule:calc(var(--Background_second));
+}
+
+
+section{
+  background: var(--Background_second);
+  border-radius: 0.4rem;
+}
+
+/*------------- 
+tools Board
+-------------*/
+
+.tools-board{
+  width: 20rem;
+  height: fit-content;
+  backdrop-filter: blur(1.1rem) saturate(180%);
+  -webkit-backdrop-filter: blur(1.1rem) saturate(180%);
+  background: var(--Background_first);
+  border-radius: 1rem;
+  border: 0.1rem solid var(--Background_border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.9rem;
+  box-sizing: border-box;
+  margin-top: 3.1rem;
+}
+
+
+
+.tools-board .row{
+  margin-bottom: 1.2rem;
+}
+
+
+.head{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 0.9rem;
+    backdrop-filter: blur(1.1rem) saturate(180%);
+    -webkit-backdrop-filter: blur(1.1rem) saturate(180%);
+    background: var(--Background_Third);
+    border-radius: 2.3rem;
+    border: 0.1rem solid var(--Background_border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+
+.tools-board .head {
+  width: 90%;
+  height: 2.5rem;
+  box-sizing: border-box;
+  padding: 0.3rem 0.9rem;
+  background: var(--Background_first);
+}
+
+.row .options{
+  list-style: none;
+  margin: 0.6rem 0 0 0.3rem;
+}
+.row .options .option{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.option:is(:hover, .active) img{
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.option :where(span, label){
+  color: var(--color-text_second);
+  cursor: pointer;
+  padding-left: 0.6rem;
+}
+.option:is(:hover, .active) :where(span, label){
+  color: var(--color-text_first);
+}
+.option #fill-color{
+  cursor: pointer;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+#fill-color:checked ~ label{
+  color: var(--color-text_first);
+}
+.option #size-slider{
+  width: 100%;
+  height: 0.3rem;
+  margin-top: 0.6rem;
+}
+.colors .options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.9rem;
+}
+.colors .option{
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  margin-top: 0.1rem;
+  position: relative;
+}
+.colors .option:nth-child(1){
+  background-color: var(--Background_second);
+  border:0.1rem solid #bfbfbf;
+}
+.colors .option:nth-child(2){
+  background-color: #000;
+}
+.colors .option:nth-child(3){
+  background-color: #ff0000;
+}
+.colors .option:nth-child(4){
+  background-color: #09ff00;
+}
+.colors .option:nth-child(5){
+  background-color: #0084ff;
+  
+}
+.colors .option.selected::before{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 0.7rem;
+  width: 0.7rem;
+  background: inherit;
+  border-radius: inherit;
+  border: 0.12rem solid var(--Background_second);
+  transform: translate(-50%, -50%);
+}
+.colors .option:first-child.selected::before{
+  border-color: #ccc;
+}
+.option #color-picker{
+  opacity: 0;
+  cursor: pointer;
+}
+
+.title {
+  color: var(--color-text_second);
+}
+
+
+.buttons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 2.5rem;
+  gap: 0.6rem;
+}
+
+.buttons button{
+  outline: none;
+  cursor: pointer;
+  padding: 0.3rem 1.1rem;
+  backdrop-filter: blur(1.1rem) saturate(180%);
+  -webkit-backdrop-filter: blur(1.1rem) saturate(180%);
+  background: var(--Background_fourth);
+  border-radius: 2.3rem;
+  border: 0.1rem solid var(--Background_border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  color: var(--color-text_first);
+}
+
+.buttons button:hover {
+  background: rgba(138, 137, 137, 0.6);
+}
+
+/*------------- 
+tools Board
+-------------*/
+
+.drawing-board{
+  overflow: hidden;
+  width: 40.3rem;
+  height: 64vh;
+  backdrop-filter: blur(1.1rem) saturate(180%);
+  -webkit-backdrop-filter: blur(1.1rem) saturate(180%);
+  background: var(--Background_Third);
+  border-radius: 2.3rem;
+  border: 0.1rem solid var(--Background_border);
+  margin-bottom: 0.3rem;
+}
+.drawing-board canvas{
+  width: 100%;
+  height: 100%;
+}
+

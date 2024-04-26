@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/css/Weather-App.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <!--/// Menu Bar ///-->
+      <div class="Menu-bar">
+        <div class="menu-item">
+          <a href="" class="menu-button">
+            <img src="/image/weather.svg" alt="">
+          </a>
+          <a href="Home.html" class="menu-button">
+            <img src="/image/home.svg" alt="">
+          </a>
+          <a href="" class="menu-button">
+            <img src="/image/search.svg" alt="">
+          </a>
+        </div>
+      </div>
+      <!--/// weather-input ///-->
+
+      <div class="weather-input">
+        <h3>Enter a City Name</h3>
+        <input class="city-input" type="text" placeholder="E.g., New York, London">
+        <div class="btn">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="location-btn"><i class="fa-solid fa-location-dot"></i></button>
+      </div>
+      </div>
+      <!--/// weather-data ///-->
+      <div class="weather-data">
+        <div class="current-weather">
+          <div class="details">
+            <h2>_______ ( ______ )</h2>
+            <h6>Temperature: __°C</h6>
+            <h6>Wind: __ M/S</h6>
+            <h6>Humidity: __%</h6>
+          </div>
+        </div>
+        <div class="days-forecast">
+          <h2>5-Day Forecast</h2>
+          <ul class="weather-cards">
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <h6>Temp: __C</h6>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <script src="/js/Weather-App.js" defer></script>
+  </body>
+</html>

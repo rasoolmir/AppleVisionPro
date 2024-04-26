@@ -1,0 +1,155 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* General CSS */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+
+   /*color */
+   --Background_first:rgba(200, 200, 200, 0.3);
+   --Background_border:  rgba(209, 213, 219, 0.3);
+   --Background_second: #fff;
+   --Background_Third: rgba(255, 255, 255, 0.3);
+   --Background_fourth:rgba(50,50,50,0.7);
+   --color-text: white;
+}
+
+
+body {
+  font-family: 'OpenSans', sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom CSS */
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 9rem 18%;
+  background: url(/image/background.jpg);
+    background-size: auto;
+  background-size: auto;
+  justify-content: center;
+  background-size: cover;
+}
+
+
+/*------------- 
+Menu Bar 
+-------------*/
+
+.Menu-bar {
+  margin-top: 8rem;
+}
+
+.menu-item {
+  width: fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+  background: var(--Background_first);
+  text-align: center;
+  backdrop-filter: blur(1.1rem) saturate(180%);
+  border-radius: 3rem;
+  border: 0.1rem solid var(--Background_border);
+  display: inline-block;
+  padding: 0;
+}
+
+.menu-button {
+  display: grid;
+  margin: 0.6rem 0.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  /*border: 0.1rem solid #fff;*/
+  width: 1.8rem;
+  height: 1.8rem;
+  align-items: center;
+}
+
+.menu-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill-rule:calc(var(--Background_second));
+}
+
+/*------------- 
+gallery 
+-------------*/
+
+.gallery {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  height: 20rem;
+  overflow: auto;
+  scrollbar-width: none;
+  backdrop-filter: blur(1.1rem) saturate(180%);
+  background: var(--Background_Third);
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--Background_border);
+  border: 0.1rem solid var(--Background_second);
+  width: 46.3rem;
+}
+
+.gallery .image {
+  height: 6.6rem;
+}
+
+.gallery .image img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+/*------------- 
+categories
+-------------*/
+
+.categories {
+  width: fit-content;
+  height: fit-content;
+  backdrop-filter: blur(1.1rem) saturate(180%);
+  background: var(--Background_Third);
+  border-radius: 38rem;
+  border: 0.1rem solid var(--Background_border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -1.5rem auto;
+}
+
+.button-value {
+  padding: 1rem .3rem;
+  background: var(--buttons);
+  border: none;
+  border-radius: .875rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  overflow: hidden;
+  color: var(--color-text);
+  width: 6rem;
+}
+
+.button-value.active {
+  margin: 0.4rem;
+  color: (--color-text);
+  height: 2.2rem;
+  border-radius: 38rem;
+  background: var(--Background_fourth);
+  padding: 0.1rem 0.3rem;
+  position: relative;
+}
