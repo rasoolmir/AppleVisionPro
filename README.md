@@ -8,7 +8,7 @@ My goal in doing this project is to implement and dynamically create five mini-p
 
 The methods I used in implementation and development include OOP, local storages, fetch API, and BEM rule.
 
-Images used (free): Freepik.com , unsplash.com , iconscout.com .
+Images used (free): Freepik.com , Unsplash.com , Iconscout.com, Pinterest.
 
 This project lacks the following two items:
 Weather API, which you need to get separately from the OpenWeatherMap.com site if necessary.
